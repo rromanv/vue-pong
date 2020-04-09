@@ -44,6 +44,9 @@
           <v-slider v-model="$store.state.paddleSpeed" label="Speed" color="success darken-2" track-color="success lighten-1" thumb-label max="200" min="10"></v-slider>
         </v-list-item>
       </v-list>
+      <v-list-item>
+        <v-btn block color="success" @click="$router.go(0)">Reload</v-btn>
+      </v-list-item>
     </v-navigation-drawer>
     <v-content class="error noOverflow">
       <router-view />
