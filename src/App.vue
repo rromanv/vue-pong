@@ -6,6 +6,15 @@
     <v-navigation-drawer app clipped class="yellow ligthten-1">
       <v-list-item>
         <v-list-item-content>
+          <v-spacer />
+          <v-list-item-title class="display-2">{{ $store.state.score }}</v-list-item-title>
+          <v-list-item-subtitle>Score</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-divider />
+
+      <v-list-item>
+        <v-list-item-content>
           <v-list-item-title class="title">Game</v-list-item-title>
           <v-list-item-subtitle>Settings</v-list-item-subtitle>
         </v-list-item-content>
@@ -25,6 +34,14 @@
         </v-list-item>
         <v-list-item>
           <v-slider v-model="$store.state.yBallChange" label="Speed Y" color="success darken-2" track-color="success lighten-1" thumb-label max="10" min="-10"></v-slider>
+        </v-list-item>
+      </v-list>
+      <v-list>
+        <v-list-item>
+          <v-slider v-model="$store.state.paddleWidth" label="Width" color="success darken-2" track-color="success lighten-1" thumb-label max="300" min="10"></v-slider>
+        </v-list-item>
+        <v-list-item>
+          <v-slider v-model="$store.state.paddleSpeed" label="Speed" color="success darken-2" track-color="success lighten-1" thumb-label max="200" min="10"></v-slider>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
